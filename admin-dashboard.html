@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Stackly</title>
+<meta name="description" content="Manage boxes, orders, and subscribers across the Stackly platform.">
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+
+<div class="nd-page">
+
+  <div class="nd-nav">
+    <div class="nd-nav-top">
+      <button class="nd-search" aria-label="Search">🔍</button>
+      <div class="nd-user">
+        <div class="nd-avatar" data-user-initial>G</div>
+        <span data-user-name>Guest</span>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="admin-dashboard.html" class="active">Dashboard</a>
+      <a href="boxes.html">Boxes</a>
+      <a href="#">Reports</a>
+      <a href="#">Subscribers</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Support</a>
+    </nav>
+  </div>
+
+  <div class="nd-wrap">
+    <p class="nd-greet">Signed in as <strong data-user-email>guest@stackly.example</strong> · <a href="#" data-logout style="color:var(--coral); font-weight:700;">Log out</a></p>
+
+    <!-- ROW 1 -->
+    <div class="nd-row1">
+
+      <!-- A: monthly target -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Monthly target</h3>
+        </div>
+        <div class="nd-big-stat">92%</div>
+        <div class="nd-big-stat-label">₹18.4L of ₹20L goal — 4 days left</div>
+        <div class="nd-progress-track"><div class="nd-progress-fill" style="width:92%;"></div></div>
+        <div class="nd-mini-grid">
+          <div class="nd-mini-stat"><div class="ic">👥</div><strong>4,812</strong><span>Subscribers</span></div>
+          <div class="nd-mini-stat"><div class="ic">📦</div><strong>612</strong><span>Shipping today</span></div>
+          <div class="nd-mini-stat"><div class="ic">🎧</div><strong>27</strong><span>Tickets open</span></div>
+        </div>
+      </div>
+
+      <!-- B: top box -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-tag-row">
+          <span class="nd-tag lime">Coffee</span>
+          <span class="nd-tag cyan">Top seller</span>
+        </div>
+        <h2 class="nd-feature-title">Origins Coffee Box</h2>
+        <p class="nd-feature-desc">1,204 active subscribers this month — highest of any box. Ethiopia beans are running low; reorder before the next pack run.</p>
+        <div class="nd-feature-foot">
+          <div style="display:flex; align-items:center;">
+            <div class="nd-avatars">
+              <div class="a" style="background:linear-gradient(135deg,var(--coral),var(--coral-dark));">PN</div>
+              <div class="a" style="background:linear-gradient(135deg,var(--gold),#0891b2);">AM</div>
+              <div class="a" style="background:linear-gradient(135deg,var(--forest),#6d28d9);">RK</div>
+            </div>
+            <span class="nd-avatars-label">1,204 subs · ▲8.2%</span>
+          </div>
+          <div class="nd-donut"><span class="ring" style="background:conic-gradient(var(--nd-orange) 0 6%, rgba(255,255,255,.12) 6% 100%);"></span><span>6% left</span></div>
+        </div>
+        <a href="boxes.html" class="nd-feature-cta">Manage Inventory</a>
+      </div>
+
+      <!-- C: revenue trend -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Revenue trend</h3>
+          <span class="nd-pill">📆 Last 6 months</span>
+        </div>
+        <div class="nd-activity-stat">₹18.4L<span>Revenue this month, ▲12% vs last</span></div>
+        <div class="nd-chart">
+          <div class="col"><div class="bar" style="height:55%;"></div><span>Apr</span></div>
+          <div class="col"><div class="bar" style="height:62%;"></div><span>May</span></div>
+          <div class="col"><div class="bar" style="height:58%;"></div><span>Jun</span></div>
+          <div class="col"><div class="bar" style="height:74%;"></div><span>Jul</span></div>
+          <div class="col"><div class="bar" style="height:88%;"></div><span>Aug</span></div>
+          <div class="col peak"><div class="bar" style="height:100%;"></div><span>Sep</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="nd-row2">
+
+      <!-- D: recent orders -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Recent orders</h3>
+          <span class="nd-pill">Today</span>
+        </div>
+        <div class="nd-schedule-list">
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">#CF-10432 · Priya N.</span>
+            <strong>Origins Coffee Box</strong>
+            <span class="nd-sched-tag beg">Fulfilled</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">☕</span><span>Bestseller</span></div>
+          </div>
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">#CF-10431 · Arjun M.</span>
+            <strong>Paws &amp; Treats</strong>
+            <span class="nd-sched-tag adv">Packing</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">🐾</span><span>New</span></div>
+          </div>
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">#CF-10430 · Elena S.</span>
+            <strong>Candle Co. Crate</strong>
+            <span class="nd-sched-tag pop">Payment pending</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">🕯️</span><span>Popular</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E: low stock -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Low stock alerts</h3>
+        </div>
+        <div class="nd-platform-list">
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--nd-orange);"></span>Origins Coffee — Ethiopia beans</div>
+            <div style="text-align:right;"><strong>6%</strong><span class="meta">left</span></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--coral);"></span>Candle Co. — Amber jars</div>
+            <div style="text-align:right;"><strong>11%</strong><span class="meta">left</span></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--gold);"></span>Skincare Ritual — Serum vials</div>
+            <div style="text-align:right;"><strong>9%</strong><span class="meta">left</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Box</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

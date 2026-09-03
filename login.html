@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Stackly</title>
+<meta name="description" content="Log in to your Stackly account to manage your subscription, track deliveries, or access your dashboard.">
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+
+<div class="nd-nav">
+    <div class="nd-nav-top">
+      <a href="index.html" class="nd-brand" aria-label="Stackly home">
+        <img src="img/logo-mark.webp" alt="">
+        <span>Stackly</span>
+      </a>
+      <div class="nd-user">
+        <a href="login.html" class="nd-avatar" aria-label="Login" style="text-decoration:none;">👤</a>
+        <a href="#" data-cart-open class="nd-cart-link" aria-label="Open cart">🛍️<span class="cart-count">0</span></a>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="index.html">Home</a>
+      <a href="boxes.html">Boxes</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+      <a href="pricing.html" class="nd-feature-cta nd-cta-inline" style="padding:10px 20px; width:auto;">Get Started</a>
+  </div>
+
+<section class="auth-section">
+  <div class="container">
+    <div class="auth-wrap">
+
+      <div class="auth-side">
+        <div>
+          <a href="index.html" class="logo"><img src="img/logo.webp" alt="Stackly" class="logo-img"></a>
+          <h2>Welcome back to your crate.</h2>
+          <p>Sign in to track deliveries, manage your subscription, or jump into your dashboard.</p>
+        </div>
+        <div class="auth-perks">
+          <div>Track every box in real time</div>
+          <div>Pause, skip or swap in one click</div>
+          <div>Exclusive subscriber-only drops</div>
+        </div>
+      </div>
+
+      <div class="auth-form-side">
+        <h1>Log in</h1>
+        <p class="text-muted">Choose your role and enter your details to continue.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="role-select-group">
+            <label>I am logging in as</label>
+            <div class="role-options">
+              <div class="role-option">
+                <input type="radio" name="role" id="role-customer" value="customer-dashboard.html" checked>
+                <label for="role-customer"><span class="role-icon">🧑‍🦱</span>Customer</label>
+              </div>
+              <div class="role-option">
+                <input type="radio" name="role" id="role-admin" value="admin-dashboard.html">
+                <label for="role-admin"><span class="role-icon">🛠️</span>Admin</label>
+              </div>
+              <div class="role-option">
+                <input type="radio" name="role" id="role-delivery" value="delivery-dashboard.html">
+                <label for="role-delivery"><span class="role-icon">🚚</span>Delivery</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="li-email">Email address</label>
+            <input type="email" id="li-email" name="email" required placeholder="you@example.com">
+            <span class="field-error"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="li-password">Password</label>
+            <input type="password" id="li-password" name="password" required placeholder="••••••••" minlength="8">
+            <span class="field-error"></span>
+            <span class="text-muted" style="font-size:.78rem;">At least 8 characters, with a letter and a number.</span>
+          </div>
+
+          <div class="auth-row-between">
+            <label class="auth-remember"><input type="checkbox" name="remember"> Remember me</label>
+            <a href="404.html" class="auth-forgot">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+          <p id="loginMsg" class="form-msg" style="margin-top:14px; text-align:center;"></p>
+        </form>
+
+        <p class="auth-switch">Don't have an account? <a href="pricing.html">Get started free</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><img src="img/logo.webp" alt="Stackly" class="logo-img"></a>
+        <p>Thoughtfully curated subscription boxes, delivered monthly across India. Small joys, on schedule.</p>
+        <div class="footer-social">
+          <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-7.8h2.6l.4-3.1h-3V8.1c0-.9.2-1.5 1.6-1.5h1.7V3.8C16.5 3.7 15.5 3.6 14.4 3.6c-2.4 0-4.1 1.5-4.1 4.2v2.3H7.6v3.1h2.7V21h3.2z"/></svg></a>
+          <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 3H22l-7.4 8.5L23.3 21h-6.8l-5.3-6.9L5 21H1.9l7.9-9L1 3h7l4.8 6.3L18.9 3zm-1.2 16h1.9L7.4 5H5.4l12.3 14z"/></svg></a>
+          <a href="404.html" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.8-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.5.5c-1 .2-1.8 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.6.5 8.5.5 8.5.5s6.9 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.5V8.5L15.8 12l-6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="boxes.html">All Boxes</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="boxes.html">Gift a Box</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p style="font-size:.88rem;">Subscribe for offers and new box drops.</p>
+        <form class="newsletter-form" style="display:flex; gap:8px;">
+          <input type="email" placeholder="Email" required style="flex:1; padding:10px 14px; border-radius:999px; border:none; font-size:.85rem;">
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+        <p class="form-msg" style="font-size:.78rem;"></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+      <span class="payments">💳 📱 🏦</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Box</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

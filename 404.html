@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Stackly</title>
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+<div class="nd-nav">
+    <div class="nd-nav-top">
+      <a href="index.html" class="nd-brand" aria-label="Stackly home">
+        <img src="img/logo-mark.webp" alt="">
+        <span>Stackly</span>
+      </a>
+      <div class="nd-user">
+        <a href="login.html" class="nd-avatar" aria-label="Login" style="text-decoration:none;">👤</a>
+        <a href="#" data-cart-open class="nd-cart-link" aria-label="Open cart">🛍️<span class="cart-count">0</span></a>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="index.html">Home</a>
+      <a href="boxes.html">Boxes</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+<section class="error-page">
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>This box got lost in transit</h1>
+    <p class="text-muted">The page you're looking for doesn't exist or has moved.</p>
+    <a href="index.html" class="btn btn-primary" style="margin-top:20px;">Back to Home</a>
+  </div>
+</section>
+
+<footer class="site-footer" style="margin-top:0;">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head"><h3>Your Box</h3><button class="cart-close" id="cartClose" aria-label="Close cart">✕</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly — Subscription Boxes You'll Actually Look Forward To</title>
+<meta name="description" content="Stackly delivers hand-curated coffee, beauty, snack, book and pet subscription boxes to your door every month. Cancel anytime.">
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hero-holo.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+
+<div class="nd-nav">
+    <div class="nd-nav-top">
+      <a href="index.html" class="nd-brand" aria-label="Stackly home">
+        <img src="img/logo-mark.webp" alt="">
+        <span>Stackly</span>
+      </a>
+      <div class="nd-user">
+        <a href="login.html" class="nd-avatar" aria-label="Login" style="text-decoration:none;">👤</a>
+        <a href="#" data-cart-open class="nd-cart-link" aria-label="Open cart">🛍️<span class="cart-count">0</span></a>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="boxes.html">Boxes</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+      <a href="pricing.html" class="nd-feature-cta nd-cta-inline" style="padding:10px 20px; width:auto;">Get Started</a>
+  </div>
+
+<!-- HERO -->
+<section class="hero-showcase">
+  <div class="hs-bg-swiper swiper" id="hsBg" aria-hidden="true">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <video class="hs-bg" autoplay muted loop playsinline preload="auto" poster="video/hero-bg-coffee-poster.webp">
+          <source src="video/hero-bg-coffee.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="swiper-slide">
+        <video class="hs-bg" muted loop playsinline preload="none" poster="video/hero-bg-tea-poster.webp">
+          <source src="video/hero-bg-tea.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="swiper-slide">
+        <video class="hs-bg" muted loop playsinline preload="none" poster="video/hero-bg-candle-poster.webp">
+          <source src="video/hero-bg-candle.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="swiper-slide">
+        <video class="hs-bg" muted loop playsinline preload="none" poster="video/hero-bg-books-poster.webp">
+          <source src="video/hero-bg-books.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <div class="hs-overlay" aria-hidden="true"></div>
+
+  <div class="container hs-top">
+    <div class="hs-copy">
+      <p class="hs-eyebrow">📦 15 categories, curated monthly</p>
+      <h1 class="hs-title">Curated Boxes,<br>Delivered Monthly</h1>
+      <p class="hs-lead">Hand-picked coffee, beauty, snacks and more — 30 boxes packed with care by our team and shipped straight to your door.</p>
+      <a href="boxes.html" class="btn hs-btn-primary">Explore Boxes</a>
+    </div>
+
+    <div class="hs-feature-swiper swiper reveal" id="hsFeature">
+      <div class="swiper-wrapper" id="hsFeatureSlides"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="hs-stats reveal">
+      <div><strong>40k+</strong><span>Boxes shipped</span></div>
+      <div><strong>4.8★</strong><span>Avg rating</span></div>
+      <div><strong>120+</strong><span>Maker partners</span></div>
+    </div>
+  </div>
+
+  <div class="container hs-strip-wrap reveal">
+    <div class="hs-strip-swiper swiper" id="hsStrip">
+      <div class="swiper-wrapper" id="hsStripSlides"></div>
+    </div>
+    <div class="hs-strip-nav">
+      <button class="hs-strip-prev" aria-label="Previous boxes">‹</button>
+      <button class="hs-strip-next" aria-label="Next boxes">›</button>
+    </div>
+  </div>
+</section>
+
+<div class="brand-strip">
+  <div class="container">
+    <span class="label">Featured in</span>
+    <div class="brand-row"><span>Better Homes</span><span>The Curated Life</span><span>Foodie Weekly</span><span>Style Digest</span><span>Home &amp; Hearth</span></div>
+  </div>
+</div>
+
+<!-- MILESTONE STATEMENT -->
+<section class="milestone">
+  <div class="container">
+    <span class="milestone-eyebrow reveal is-visible">📦 Since 2021</span>
+    <h2 class="milestone-title reveal is-visible">5 years of curated joy</h2>
+    <div class="milestone-visual reveal is-visible">
+      <img src="img/milestone-confetti.webp" alt="Confetti — celebrating five years of Stackly" loading="lazy">
+      <a href="about.html" class="milestone-fab" aria-label="Read our story">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SEE IT ARRIVE (video) -->
+<section class="section-tight video-section">
+  <div class="container video-wrap">
+    <div class="video-copy reveal">
+      <span class="eyebrow">See it arrive</span>
+      <h2>From our warehouse to your doorstep</h2>
+      <p class="text-muted">Every Stackly box is packed by hand, tracked door to door, and shows up exactly when you expect it. Here's a real delivery, start to finish.</p>
+    </div>
+    <div class="video-frame reveal">
+      <video class="hero-video" poster="video/hero-video-poster.webp" autoplay muted loop playsinline preload="metadata">
+        <source src="video/doorstep-delivery.mp4" type="video/mp4">
+      </video>
+      <span class="video-badge">🚚 Real delivery footage</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps to your first box</h2>
+      <p>No hidden fees, no long-term contracts — just boxes you'll actually want to open.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card reveal">
+        <span class="step-num">01</span>
+        <div class="icon">🧭</div>
+        <h3>Pick your box</h3>
+        <p class="text-muted">Choose from 15 curated categories, from coffee to plants to pet treats.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">02</span>
+        <div class="icon">📅</div>
+        <h3>Set your schedule</h3>
+        <p class="text-muted">Go monthly, quarterly or annual — pause or skip a month whenever you like.</p>
+      </div>
+      <div class="step-card reveal">
+        <span class="step-num">03</span>
+        <div class="icon">🚚</div>
+        <h3>Unbox the joy</h3>
+        <p class="text-muted">Track your delivery and unbox a hand-picked selection every single month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED BOXES -->
+<section class="section-tight" style="background: var(--cream-2);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Our boxes</span>
+      <h2>Find your perfect crate</h2>
+      <p>A taste of what's inside — 15 categories, all shipped monthly.</p>
+    </div>
+    <div class="box-grid" id="boxGrid"></div>
+    <div style="text-align:center; margin-top:44px;">
+      <a href="boxes.html" class="btn btn-dark">View All Boxes</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST / INFO STRIP -->
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Stackly</span>
+      <h2>The fine print, made simple</h2>
+    </div>
+    <div class="value-grid trust-grid">
+      <div class="info-card reveal">
+        <div class="icon">🚚</div>
+        <h3>Free shipping over ₹999</h3>
+        <p class="text-muted">Boxes ship on the 5th of every month and arrive within 3–6 business days, tracked door to door.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="icon">🔄</div>
+        <h3>14-day swap guarantee</h3>
+        <p class="text-muted">Don't love an item? Tell us within 14 days of delivery and we'll credit or swap it — no questions asked.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="icon">⏸️</div>
+        <h3>Pause or cancel anytime</h3>
+        <p class="text-muted">No contracts, no fees. Skip a month or cancel from your dashboard before your next billing date.</p>
+      </div>
+      <div class="info-card reveal">
+        <div class="icon">🌱</div>
+        <h3>Carbon-neutral delivery</h3>
+        <p class="text-muted">Recyclable packaging on every box, with shipping emissions offset through verified partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING PREVIEW -->
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Membership</span>
+      <h2>Simple, flexible pricing</h2>
+      <p>Every plan includes free shipping, easy swaps and cancel-anytime freedom.</p>
+    </div>
+    <div class="plans-grid">
+      <div class="plan-card reveal">
+        <h3>Starter</h3>
+        <p class="text-muted">One box, one month at a time.</p>
+        <div class="plan-price">₹999<sub>/mo</sub></div>
+        <ul class="plan-features">
+          <li>1 curated box monthly</li>
+          <li>Free standard shipping</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-outline btn-block">Choose Starter</a>
+      </div>
+      <div class="plan-card featured reveal">
+        <span class="plan-badge">Most Popular</span>
+        <h3>Quarterly</h3>
+        <p class="text-muted">Billed every 3 months, save 15%.</p>
+        <div class="plan-price">₹849<sub>/mo</sub></div>
+        <ul class="plan-features">
+          <li>1 curated box monthly</li>
+          <li>Free priority shipping</li>
+          <li>Early access to limited boxes</li>
+          <li>Free gift on renewal</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-primary btn-block">Choose Quarterly</a>
+      </div>
+      <div class="plan-card reveal">
+        <h3>Annual</h3>
+        <p class="text-muted">Billed yearly, save 25%.</p>
+        <div class="plan-price">₹749<sub>/mo</sub></div>
+        <ul class="plan-features">
+          <li>1 curated box monthly</li>
+          <li>Free priority shipping</li>
+          <li>2 free bonus boxes / year</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-outline btn-block">Choose Annual</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background: var(--forest-light);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Loved by subscribers</span>
+      <h2>Real boxes, real reactions</h2>
+    </div>
+    <div class="testi-swiper swiper reveal" id="testimonials">
+      <div class="swiper-wrapper" id="testiSlides"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-band cta-video-band reveal">
+      <video class="cta-bg" autoplay muted loop playsinline preload="none" poster="video/hero-bg-candle-poster.webp">
+        <source src="video/hero-bg-candle.mp4" type="video/mp4">
+      </video>
+      <div class="cta-overlay" aria-hidden="true"></div>
+      <span class="eyebrow" style="background: rgba(255,255,255,.12); color:#fff;">Stay in the loop</span>
+      <h2>Get 15% off your first box</h2>
+      <p style="color:#cdd8d0;">Join our list for early access to limited-edition boxes and subscriber-only deals.</p>
+      <form class="cta-form newsletter-form">
+        <input type="email" placeholder="you@example.com" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="form-msg"></p>
+      <p class="form-note">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><img src="img/logo.webp" alt="Stackly" class="logo-img"></a>
+        <p>Thoughtfully curated subscription boxes, delivered monthly across India. Small joys, on schedule.</p>
+        <div class="footer-social">
+          <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-7.8h2.6l.4-3.1h-3V8.1c0-.9.2-1.5 1.6-1.5h1.7V3.8C16.5 3.7 15.5 3.6 14.4 3.6c-2.4 0-4.1 1.5-4.1 4.2v2.3H7.6v3.1h2.7V21h3.2z"/></svg></a>
+          <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 3H22l-7.4 8.5L23.3 21h-6.8l-5.3-6.9L5 21H1.9l7.9-9L1 3h7l4.8 6.3L18.9 3zm-1.2 16h1.9L7.4 5H5.4l12.3 14z"/></svg></a>
+          <a href="404.html" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.8-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.5.5c-1 .2-1.8 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.6.5 8.5.5 8.5.5s6.9 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.5V8.5L15.8 12l-6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="boxes.html">All Boxes</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="boxes.html">Gift a Box</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p style="font-size:.88rem;">Subscribe for offers and new box drops.</p>
+        <form class="newsletter-form" style="display:flex; gap:8px;">
+          <input type="email" placeholder="Email" required style="flex:1; padding:10px 14px; border-radius:999px; border:none; font-size:.85rem;">
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+        <p class="form-msg" style="font-size:.78rem;"></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+      <span class="payments">💳 📱 🏦</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Box</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

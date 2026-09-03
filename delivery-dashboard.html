@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delivery Dashboard — Stackly</title>
+<meta name="description" content="Track your assigned Stackly deliveries and update drop-off status on the go.">
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+
+<div class="nd-page">
+
+  <div class="nd-nav">
+    <div class="nd-nav-top">
+      <button class="nd-search" aria-label="Search">🔍</button>
+      <div class="nd-user">
+        <div class="nd-avatar" data-user-initial>G</div>
+        <span data-user-name>Guest</span>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="delivery-dashboard.html" class="active">Dashboard</a>
+      <a href="#">Route</a>
+      <a href="#">Earnings</a>
+      <a href="#">Performance</a>
+      <a href="contact.html">Support</a>
+    </nav>
+  </div>
+
+  <div class="nd-wrap">
+    <p class="nd-greet">Signed in as <strong data-user-email>guest@stackly.example</strong> · <a href="#" data-logout style="color:var(--coral); font-weight:700;">Log out</a></p>
+
+    <!-- ROW 1 -->
+    <div class="nd-row1">
+
+      <!-- A: route progress -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Route progress</h3>
+        </div>
+        <div class="nd-big-stat">64%</div>
+        <div class="nd-big-stat-label">9 of 14 stops complete</div>
+        <div class="nd-progress-track"><div class="nd-progress-fill" style="width:64%;"></div></div>
+        <div class="nd-mini-grid">
+          <div class="nd-mini-stat"><div class="ic">🚚</div><strong>14</strong><span>Stops</span></div>
+          <div class="nd-mini-stat"><div class="ic">✅</div><strong>9</strong><span>Delivered</span></div>
+          <div class="nd-mini-stat"><div class="ic">⏳</div><strong>5</strong><span>Remaining</span></div>
+        </div>
+      </div>
+
+      <!-- B: next stop -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-tag-row">
+          <span class="nd-tag lime">Priority</span>
+          <span class="nd-tag cyan">Next stop</span>
+        </div>
+        <h2 class="nd-feature-title">Priya N. — Indiranagar</h2>
+        <p class="nd-feature-desc">4th Cross, Indiranagar, Bengaluru 560038. Origins Coffee Box — leave with security if no answer, call ahead if gate is locked.</p>
+        <div class="nd-feature-foot">
+          <div style="display:flex; align-items:center;">
+            <div class="nd-avatars">
+              <div class="a" style="background:linear-gradient(135deg,var(--coral),var(--coral-dark));">PN</div>
+              <div class="a" style="background:linear-gradient(135deg,var(--gold),#0891b2);">AM</div>
+              <div class="a" style="background:linear-gradient(135deg,var(--forest),#6d28d9);">ES</div>
+            </div>
+            <span class="nd-avatars-label">4.9★ rated driver</span>
+          </div>
+          <div class="nd-donut"><span class="ring"></span><span>2.1 km</span></div>
+        </div>
+        <a href="#" class="nd-feature-cta">Start Navigation</a>
+      </div>
+
+      <!-- C: this week -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>This week</h3>
+          <span class="nd-pill">📆 Mon–Sat</span>
+        </div>
+        <div class="nd-activity-stat">318 stops<span>Completed last 30 days, 97% on-time</span></div>
+        <div class="nd-chart">
+          <div class="col"><div class="bar" style="height:60%;"></div><span>Mon</span></div>
+          <div class="col"><div class="bar" style="height:75%;"></div><span>Tue</span></div>
+          <div class="col"><div class="bar" style="height:50%;"></div><span>Wed</span></div>
+          <div class="col peak"><div class="bar" style="height:85%;"></div><span>Thu</span></div>
+          <div class="col"><div class="bar" style="height:70%;"></div><span>Fri</span></div>
+          <div class="col"><div class="bar" style="height:64%;"></div><span>Today</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="nd-row2">
+
+      <!-- D: next stops -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Next stops</h3>
+          <span class="nd-pill">₹1,120 earned today</span>
+        </div>
+        <div class="nd-schedule-list">
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">Koramangala 5th Block</span>
+            <strong>Arjun M.</strong>
+            <span class="nd-sched-tag adv">Queued</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">🐾</span><span>Paws &amp; Treats</span></div>
+          </div>
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">Indiranagar 100ft Road</span>
+            <strong>Meera T.</strong>
+            <span class="nd-sched-tag adv">Queued</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">🍵</span><span>Tea Chest</span></div>
+          </div>
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">HSR Layout Sector 2</span>
+            <strong>Elena S.</strong>
+            <span class="nd-sched-tag beg">Delivered</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">🕯️</span><span>★★★★★</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E: performance -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Performance</h3>
+        </div>
+        <div class="nd-platform-list">
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--nd-lime);"></span>Avg. rating</div>
+            <div style="text-align:right;"><strong>4.9★</strong></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--gold);"></span>On-time rate</div>
+            <div style="text-align:right;"><strong>97%</strong></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--coral);"></span>Distance today</div>
+            <div style="text-align:right;"><strong>38.4 km</strong></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--nd-orange);"></span>Incentive earned</div>
+            <div style="text-align:right;"><strong>₹2,400</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Box</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

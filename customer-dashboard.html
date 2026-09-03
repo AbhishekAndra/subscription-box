@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Stackly</title>
+<meta name="description" content="Manage your Stackly subscription, track deliveries, and view your box history.">
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+
+<div class="nd-page">
+
+  <div class="nd-nav">
+    <div class="nd-nav-top">
+      <button class="nd-search" aria-label="Search">🔍</button>
+      <div class="nd-user">
+        <div class="nd-avatar" data-user-initial>G</div>
+        <span data-user-name>Guest</span>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="customer-dashboard.html" class="active">Dashboard</a>
+      <a href="boxes.html">Boxes</a>
+      <a href="#" data-cart-open>Cart</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Support</a>
+    </nav>
+  </div>
+
+  <div class="nd-wrap">
+    <p class="nd-greet">Signed in as <strong data-user-email>guest@stackly.example</strong> · <a href="#" data-logout style="color:var(--coral); font-weight:700;">Log out</a></p>
+
+    <!-- ROW 1 -->
+    <div class="nd-row1">
+
+      <!-- A: progress -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Loyalty progress</h3>
+        </div>
+        <div class="nd-big-stat">83%</div>
+        <div class="nd-big-stat-label">To Gold tier — 260 pts to go</div>
+        <div class="nd-progress-track"><div class="nd-progress-fill" style="width:83%;"></div></div>
+        <div class="nd-mini-grid">
+          <div class="nd-mini-stat"><div class="ic">📦</div><strong>3</strong><span>Active</span></div>
+          <div class="nd-mini-stat"><div class="ic">✅</div><strong>12</strong><span>Received</span></div>
+          <div class="nd-mini-stat"><div class="ic">📅</div><strong>18</strong><span>Days left</span></div>
+        </div>
+      </div>
+
+      <!-- B: featured box -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-tag-row">
+          <span class="nd-tag lime">Tea</span>
+          <span class="nd-tag cyan">Bestseller</span>
+        </div>
+        <h2 class="nd-feature-title">Ceremony Tea Chest</h2>
+        <p class="nd-feature-desc">Loose-leaf teas and ceremony tools from small growers, steeped in story — this month's pick for your quarterly plan.</p>
+        <div class="nd-feature-foot">
+          <div style="display:flex; align-items:center;">
+            <div class="nd-avatars">
+              <div class="a" style="background:linear-gradient(135deg,var(--coral),var(--coral-dark));">PN</div>
+              <div class="a" style="background:linear-gradient(135deg,var(--gold),#0891b2);">MW</div>
+              <div class="a" style="background:linear-gradient(135deg,var(--forest),#6d28d9);">ES</div>
+            </div>
+            <span class="nd-avatars-label">4.8★ · 116 reviews</span>
+          </div>
+          <div class="nd-donut"><span class="ring"></span><span>76%</span></div>
+        </div>
+        <a href="boxes.html" class="nd-feature-cta">Track Delivery</a>
+      </div>
+
+      <!-- C: activity -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Activity</h3>
+          <span class="nd-pill">📆 Last 6 months</span>
+        </div>
+        <div class="nd-activity-stat">12 boxes<span>Received this year, +2 this month</span></div>
+        <div class="nd-chart">
+          <div class="col"><div class="bar" style="height:45%;"></div><span>Apr</span></div>
+          <div class="col"><div class="bar" style="height:60%;"></div><span>May</span></div>
+          <div class="col"><div class="bar" style="height:60%;"></div><span>Jun</span></div>
+          <div class="col"><div class="bar" style="height:80%;"></div><span>Jul</span></div>
+          <div class="col"><div class="bar" style="height:75%;"></div><span>Aug</span></div>
+          <div class="col peak"><div class="bar" style="height:100%;"></div><span>Sep</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="nd-row2">
+
+      <!-- D: upcoming deliveries -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>Upcoming deliveries</h3>
+          <span class="nd-pill">This month</span>
+        </div>
+        <div class="nd-schedule-list">
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">Arriving Sep 20</span>
+            <strong>Origins Coffee Box</strong>
+            <span class="nd-sched-tag beg">In transit</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">☕</span><span>Bestseller</span></div>
+          </div>
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">Arriving Sep 24</span>
+            <strong>Glow Beauty Edit</strong>
+            <span class="nd-sched-tag adv">Processing</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">💄</span><span>New</span></div>
+          </div>
+          <div class="nd-sched-card">
+            <span class="nd-sched-time">Delivered Aug 22</span>
+            <strong>Novel Nook</strong>
+            <span class="nd-sched-tag pop">Delivered</span>
+            <div class="nd-sched-foot"><span class="nd-sched-avatar">📚</span><span>Editor's Pick</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E: by category -->
+      <div class="nd-card reveal is-visible">
+        <div class="nd-eyebrow-row">
+          <h3>By category</h3>
+        </div>
+        <div class="nd-platform-list">
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--nd-lime);"></span>Coffee</div>
+            <div style="text-align:right;"><strong>5 boxes</strong><span class="meta">₹120 spent</span></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--coral);"></span>Beauty</div>
+            <div style="text-align:right;"><strong>3 boxes</strong><span class="meta">₹96 spent</span></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--gold);"></span>Books</div>
+            <div style="text-align:right;"><strong>2 boxes</strong><span class="meta">₹54 spent</span></div>
+          </div>
+          <div class="nd-platform-row">
+            <div class="lead"><span class="dot" style="background:var(--nd-orange);"></span>Tea</div>
+            <div style="text-align:right;"><strong>2 boxes</strong><span class="meta">₹46 spent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Box</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
