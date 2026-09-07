@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Stackly</title>
+<meta name="description" content="See Stackly in motion: real delivery footage and behind-the-scenes ambience from our coffee, tea, candle and book boxes.">
+<link rel="icon" type="image/webp" href="img/favicon-mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/animations.css">
+<style>
+  .gallery-grid { display: flex; flex-wrap: wrap; gap: 28px; }
+  .gallery-grid .gallery-card { flex: 1 1 320px; max-width: calc(50% - 14px); }
+  .gallery-card {
+    position: relative; border-radius: var(--radius-md); overflow: hidden;
+    border: 1px solid var(--line); background: var(--paper);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .gallery-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .gallery-thumb { position: relative; height: 260px; overflow: hidden; }
+  .gallery-thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumb .video-badge { position: absolute; top: 16px; left: 16px; bottom: auto; }
+  .gallery-body { padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+  .gallery-body h3 { font-size: 1.1rem; margin: 0; }
+  .gallery-body p { color: var(--ink-soft); font-size: .92rem; margin: 0; }
+  .gallery-body a { font-weight: 700; color: var(--coral); font-size: .88rem; text-decoration: none; }
+  @media (max-width: 700px) { .gallery-grid .gallery-card { max-width: 100%; } }
+</style>
+</head>
+<body>
+
+<div class="nd-blobs" aria-hidden="true"></div>
+<div class="nd-blob-3" aria-hidden="true"></div>
+
+<div class="nd-nav">
+    <div class="nd-nav-top">
+      <a href="index.html" class="nd-brand" aria-label="Stackly home">
+        <img src="img/logo-mark.webp" alt="">
+        <span>Stackly</span>
+      </a>
+      <div class="nd-user">
+        <a href="login.html" class="nd-avatar" aria-label="Login" style="text-decoration:none;">👤</a>
+        <a href="#" data-cart-open class="nd-cart-link" aria-label="Open cart">🛍️<span class="cart-count">0</span></a>
+      </div>
+    </div>
+    <nav class="nd-nav-links">
+      <a href="index.html">Home</a>
+      <a href="boxes.html">Boxes</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+      <a href="pricing.html" class="nd-feature-cta nd-cta-inline" style="padding:10px 20px; width:auto;">Get Started</a>
+  </div>
+
+<section class="page-hero page-hero-video">
+  <video class="page-hero-bg" autoplay muted loop playsinline preload="none" poster="video/hero-bg-candle-poster.webp">
+    <source src="video/hero-bg-candle.mp4" type="video/mp4">
+  </video>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="container">
+    <span class="eyebrow">In motion</span>
+    <h1>Stackly, behind the scenes</h1>
+    <p class="hero-lead" style="margin:0 auto;">Real delivery footage and the quiet moments — brewing, lighting, steeping, reading — that inspire every box we pack.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="stat-grid reveal">
+      <div><strong>5</strong><span>Original video clips</span></div>
+      <div><strong>4</strong><span>Box categories featured</span></div>
+      <div><strong>100%</strong><span>Filmed with real subscribers</span></div>
+      <div><strong>New</strong><span>Footage added every season</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEE IT ARRIVE (featured video) -->
+<section class="section-tight video-section">
+  <div class="container video-wrap">
+    <div class="video-copy reveal">
+      <span class="eyebrow">Straight to your door</span>
+      <h2>Real delivery, start to finish</h2>
+      <p class="text-muted">No stock footage — this is an actual Stackly box being packed, sealed and handed off, tracked door to door until it lands on a real subscriber's doorstep.</p>
+      <a href="pricing.html" class="btn btn-primary" style="margin-top:6px;">Get your first box</a>
+    </div>
+    <div class="video-frame reveal">
+      <video class="hero-video" poster="video/hero-video-poster.webp" autoplay muted loop playsinline preload="metadata">
+        <source src="video/doorstep-delivery.mp4" type="video/mp4">
+      </video>
+      <span class="video-badge">🚚 Real delivery footage</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="background: var(--cream-2);">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:32px;">
+      <span class="eyebrow">Set the mood</span>
+      <h2>Ambience from our best-loved boxes</h2>
+      <p>A closer look at what four of our most popular categories feel like at home.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card reveal">
+        <div class="gallery-thumb">
+          <video class="gallery-video" poster="video/hero-bg-coffee-poster.webp" muted loop playsinline preload="none">
+            <source src="video/hero-bg-coffee.mp4" type="video/mp4">
+          </video>
+          <span class="video-badge">☕ Coffee</span>
+        </div>
+        <div class="gallery-body">
+          <h3>A slower morning pour-over</h3>
+          <p>The ritual behind our Origins Coffee Box — small-batch roasts, ground fresh, brewed slow.</p>
+          <a href="boxes.html">Shop Coffee boxes →</a>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-thumb">
+          <video class="gallery-video" poster="video/hero-bg-tea-poster.webp" muted loop playsinline preload="none">
+            <source src="video/hero-bg-tea.mp4" type="video/mp4">
+          </video>
+          <span class="video-badge">🍵 Tea</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Steeping the ceremony</h3>
+          <p>Loose-leaf teas and ceremony tools from the Ceremony Tea Chest, poured the traditional way.</p>
+          <a href="boxes.html">Shop Tea boxes →</a>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-thumb">
+          <video class="gallery-video" poster="video/hero-bg-candle-poster.webp" muted loop playsinline preload="none">
+            <source src="video/hero-bg-candle.mp4" type="video/mp4">
+          </video>
+          <span class="video-badge">🕯️ Home</span>
+        </div>
+        <div class="gallery-body">
+          <h3>An evening with Candle Co.</h3>
+          <p>Hand-poured soy candles from the Candle Co. Crate, lit for a new scent story every month.</p>
+          <a href="boxes.html">Shop Home boxes →</a>
+        </div>
+      </div>
+      <div class="gallery-card reveal">
+        <div class="gallery-thumb">
+          <video class="gallery-video" poster="video/hero-bg-books-poster.webp" muted loop playsinline preload="none">
+            <source src="video/hero-bg-books.mp4" type="video/mp4">
+          </video>
+          <span class="video-badge">📚 Books</span>
+        </div>
+        <div class="gallery-body">
+          <h3>A page-turner from Novel Nook</h3>
+          <p>This month's hand-picked release, plus the bookish treats that come with it.</p>
+          <a href="boxes.html">Shop Book boxes →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-band reveal" style="background: linear-gradient(135deg, var(--coral), var(--coral-dark));">
+      <span class="eyebrow" style="background: rgba(255,255,255,.18); color:#fff;">Liked what you saw?</span>
+      <h2>Bring the ritual home</h2>
+      <p style="color:#fce3d9;">Pick a category, choose a plan, and your first box ships on the 5th.</p>
+      <a href="boxes.html" class="btn btn-ghost" style="margin-top:10px;">Browse all boxes</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo"><img src="img/logo.webp" alt="Stackly" class="logo-img"></a>
+        <p>Thoughtfully curated subscription boxes, delivered monthly across India. Small joys, on schedule.</p>
+        <div class="footer-social">
+          <a href="404.html" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="404.html" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-7.8h2.6l.4-3.1h-3V8.1c0-.9.2-1.5 1.6-1.5h1.7V3.8C16.5 3.7 15.5 3.6 14.4 3.6c-2.4 0-4.1 1.5-4.1 4.2v2.3H7.6v3.1h2.7V21h3.2z"/></svg></a>
+          <a href="404.html" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 3H22l-7.4 8.5L23.3 21h-6.8l-5.3-6.9L5 21H1.9l7.9-9L1 3h7l4.8 6.3L18.9 3zm-1.2 16h1.9L7.4 5H5.4l12.3 14z"/></svg></a>
+          <a href="404.html" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.8-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.5.5c-1 .2-1.8 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.6.5 8.5.5 8.5.5s6.9 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3zM9.8 15.5V8.5L15.8 12l-6 3.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="boxes.html">All Boxes</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="boxes.html">Gift a Box</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p style="font-size:.88rem;">Subscribe for offers and new box drops.</p>
+        <form class="newsletter-form" style="display:flex; gap:8px;">
+          <input type="email" placeholder="Email" required style="flex:1; padding:10px 14px; border-radius:999px; border:none; font-size:.85rem;">
+          <button type="submit" class="btn btn-primary btn-sm">Join</button>
+        </form>
+        <p class="form-msg" style="font-size:.78rem;"></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year"></span> Stackly. All rights reserved.</span>
+      <span class="payments">💳 📱 🏦</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast-stack"></div>
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Box</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Estimated total</span><span id="cartTotal">₹0 / mo</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+<script>
+  // Ambience clips play on hover/focus/tap instead of all autoplaying at once.
+  document.querySelectorAll(".gallery-card").forEach((card) => {
+    const video = card.querySelector(".gallery-video");
+    if (!video) return;
+    const play = () => video.play().catch(() => {});
+    const stop = () => { video.pause(); video.currentTime = 0; };
+    card.addEventListener("mouseenter", play);
+    card.addEventListener("mouseleave", stop);
+    card.addEventListener("touchstart", play, { passive: true });
+    card.addEventListener("focusin", play);
+    card.addEventListener("focusout", stop);
+  });
+</script>
+</body>
+</html>
