@@ -659,8 +659,84 @@ section { padding: 96px 0; }
 .form-field.invalid input, .form-field.invalid textarea, .form-field.invalid select { border-color: var(--coral); }
 
 /* ---------- 404 ---------- */
-.error-page { text-align: center; padding: 120px 0; }
+.error-page { position: relative; text-align: center; padding: 120px 0; overflow: hidden; }
+.error-bg { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
+.error-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 63, 164, 0.28) 0%, transparent 42%),
+    radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.36) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(11, 7, 20, 0.82), rgba(13, 6, 32, 0.78));
+}
+.error-overlay::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, #000 0%, transparent 75%);
+}
+.error-page .container { position: relative; z-index: 2; }
+@media (prefers-reduced-motion: reduce) {
+  .error-bg { display: none; }
+}
 .error-code { font-family: var(--ff-display); font-size: 8rem; color: rgba(255, 255, 255, 0.14); line-height: 1; }
+
+/* ---------- 404 cartoon: lost delivery box ---------- */
+.lost-box-scene { position: relative; width: 220px; height: 200px; margin: 0 auto 8px; }
+.lost-box { width: 100%; height: 100%; display: block; overflow: visible; animation: lost-box-bob 3.2s ease-in-out infinite; }
+.lost-box-shadow { fill: rgba(0, 0, 0, 0.35); animation: lost-box-shadow 3.2s ease-in-out infinite; transform-origin: 110px 182px; }
+.lost-box-arm-l { animation: lost-box-arm-l 2.6s ease-in-out infinite; transform-origin: 42px 108px; }
+.lost-box-arm-r { animation: lost-box-arm-r 1.4s ease-in-out infinite; transform-origin: 178px 108px; }
+.lost-box-pupil { animation: lost-box-look 4s ease-in-out infinite; }
+.lost-box-eyes { animation: lost-box-blink 4.6s ease-in-out infinite; transform-origin: 110px 120px; }
+.lost-q {
+  position: absolute; top: 6px; font-family: var(--ff-display); font-weight: 700; font-size: 1.6rem;
+  color: var(--gold); opacity: 0; animation: lost-q-float 3.6s ease-in infinite;
+}
+.lost-q.q1 { left: 12%; animation-delay: 0s; }
+.lost-q.q2 { left: 48%; font-size: 1.1rem; animation-delay: 1.2s; }
+.lost-q.q3 { left: 78%; font-size: 1.3rem; animation-delay: 2.3s; }
+
+@keyframes lost-box-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-14px) rotate(-2deg); }
+}
+@keyframes lost-box-shadow {
+  0%, 100% { transform: scaleX(1); opacity: .35; }
+  50%      { transform: scaleX(.82); opacity: .2; }
+}
+@keyframes lost-box-arm-l {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(-12deg); }
+}
+@keyframes lost-box-arm-r {
+  0%, 20%, 100% { transform: rotate(0deg); }
+  10%           { transform: rotate(24deg); }
+}
+@keyframes lost-box-look {
+  0%, 15%  { transform: translateX(0); }
+  25%, 40% { transform: translateX(-4px); }
+  55%, 70% { transform: translateX(4px); }
+  85%, 100% { transform: translateX(0); }
+}
+@keyframes lost-box-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%           { transform: scaleY(.1); }
+}
+@keyframes lost-q-float {
+  0%   { transform: translateY(10px) scale(.7); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(-48px) scale(1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lost-box, .lost-box-shadow, .lost-box-arm-l, .lost-box-arm-r, .lost-box-pupil, .lost-box-eyes, .lost-q { animation: none; }
+  .lost-q { opacity: .8; }
+}
+@media (max-width: 780px) {
+  .lost-box-scene { width: 170px; height: 156px; }
+}
 
 /* ---------- Liquid glass surfaces ---------- */
 /* Frosted, translucent panels that let the page's ambient neon glow show
@@ -782,10 +858,50 @@ section { padding: 96px 0; }
   position: relative; margin: 56px auto 0; max-width: 1200px; border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   overflow: hidden; box-shadow: var(--shadow-lg);
 }
-.milestone-visual img { width: 100%; height: auto; max-height: 460px; object-fit: cover; display: block; }
 .milestone-visual::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(0deg, rgba(11,7,20,.55) 0%, transparent 40%);
+}
+
+/* ---------- milestone visual: CSS confetti banner (no stock photo) ---------- */
+.milestone-visual-bg {
+  position: relative; height: 460px; overflow: hidden;
+  background: linear-gradient(135deg, var(--forest-dark) 0%, #2a1f4d 55%, var(--coral-dark) 130%);
+}
+.milestone-visual-stat {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;
+}
+.milestone-visual-stat strong {
+  font-family: var(--ff-display); font-weight: 700; font-size: clamp(4rem, 9vw, 7.5rem); line-height: 1;
+  color: #fff; text-shadow: 0 14px 40px rgba(0,0,0,.35);
+}
+.milestone-visual-stat span {
+  margin-top: 6px; font-size: .95rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: rgba(255,255,255,.82);
+}
+.confetti-piece {
+  position: absolute; top: -40px; display: block; border-radius: 2px;
+  animation: confetti-fall linear infinite;
+}
+.confetti-piece.c1  { left: 4%;  width: 12px; height: 18px; background: var(--coral);        animation-duration: 7.5s; animation-delay: -1s; }
+.confetti-piece.c2  { left: 14%; width: 9px;  height: 14px; background: var(--gold);          animation-duration: 6.2s; animation-delay: -3.5s; border-radius: 50%; }
+.confetti-piece.c3  { left: 24%; width: 11px; height: 16px; background: #7fd4c1;              animation-duration: 8.4s; animation-delay: -.5s; }
+.confetti-piece.c4  { left: 34%; width: 8px;  height: 12px; background: #fff;                 animation-duration: 5.8s; animation-delay: -4.2s; }
+.confetti-piece.c5  { left: 46%; width: 13px; height: 13px; background: var(--coral-dark);    animation-duration: 7s;   animation-delay: -2.2s; border-radius: 50%; }
+.confetti-piece.c6  { left: 58%; width: 10px; height: 15px; background: var(--gold);          animation-duration: 6.8s; animation-delay: -5s; }
+.confetti-piece.c7  { left: 68%; width: 9px;  height: 14px; background: #a6a0ff;               animation-duration: 8s;   animation-delay: -1.8s; }
+.confetti-piece.c8  { left: 78%; width: 12px; height: 12px; background: var(--coral);          animation-duration: 6.4s; animation-delay: -3s; border-radius: 50%; }
+.confetti-piece.c9  { left: 88%; width: 8px;  height: 16px; background: #fff;                  animation-duration: 7.8s; animation-delay: -.9s; }
+.confetti-piece.c10 { left: 94%; width: 10px; height: 14px; background: #7fd4c1;               animation-duration: 6s;   animation-delay: -4.6s; }
+.confetti-piece.c11 { left: 40%; width: 8px;  height: 8px;  background: var(--gold);           animation-duration: 9s;   animation-delay: -6s; border-radius: 50%; }
+.confetti-piece.c12 { left: 8%;  width: 10px; height: 10px; background: #a6a0ff;                animation-duration: 5.5s; animation-delay: -2.8s; border-radius: 50%; }
+@keyframes confetti-fall {
+  0%   { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translateY(520px) rotate(340deg); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti-piece { animation: none; opacity: 0; }
 }
 .milestone-fab {
   position: absolute; right: 28px; bottom: 28px; z-index: 2; width: 60px; height: 60px; border-radius: 50%;
@@ -797,6 +913,7 @@ section { padding: 96px 0; }
 @media (max-width: 780px) {
   .milestone { padding: 64px 0 0; }
   .milestone-visual { margin-top: 36px; }
-  .milestone-visual img { max-height: 280px; }
+  .milestone-visual-bg { height: 280px; }
+  .milestone-visual-stat span { font-size: .8rem; }
   .milestone-fab { width: 48px; height: 48px; right: 16px; bottom: 16px; }
 }

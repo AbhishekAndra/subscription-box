@@ -6,13 +6,17 @@
   const $ = (sel) => document.querySelector(sel);
 
   let email = "";
-  try { email = sessionStorage.getItem("stackly_email") || ""; } catch (e) {}
+  let savedName = "";
+  try {
+    email = sessionStorage.getItem("stackly_email") || "";
+    savedName = sessionStorage.getItem("stackly_name") || "";
+  } catch (e) {}
 
   const greetEl = $("[data-user-email]");
   if (greetEl) greetEl.textContent = email || "guest@stackly.example";
 
   const namePart = (email.split("@")[0] || "guest").replace(/[._]/g, " ").trim();
-  const displayName = namePart ? namePart.charAt(0).toUpperCase() + namePart.slice(1) : "Guest";
+  const displayName = savedName || (namePart ? namePart.charAt(0).toUpperCase() + namePart.slice(1) : "Guest");
   const nameEl = $("[data-user-name]");
   if (nameEl) nameEl.textContent = displayName;
   const initialEl = $("[data-user-initial]");
@@ -25,6 +29,7 @@
       try {
         sessionStorage.removeItem("stackly_role");
         sessionStorage.removeItem("stackly_email");
+        sessionStorage.removeItem("stackly_name");
       } catch (err) {}
       window.location.href = "login.html";
     });

@@ -43,7 +43,43 @@
   </div>
 
 <section class="error-page">
+  <video class="error-bg" autoplay muted loop playsinline preload="auto" poster="video/hero-bg-candle-poster.webp">
+    <source src="video/hero-bg-candle.mp4" type="video/mp4">
+  </video>
+  <div class="error-overlay" aria-hidden="true"></div>
   <div class="container">
+
+    <div class="lost-box-scene" aria-hidden="true">
+      <span class="lost-q q1">?</span>
+      <span class="lost-q q2">?</span>
+      <span class="lost-q q3">?</span>
+
+      <svg class="lost-box" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse class="lost-box-shadow" cx="110" cy="182" rx="58" ry="10"/>
+        <g class="lost-box-body">
+          <!-- back flaps -->
+          <path d="M40 70 L15 30 L55 22 L70 62 Z" fill="var(--forest)"/>
+          <path d="M180 70 L205 30 L165 22 L150 62 Z" fill="var(--forest)"/>
+          <!-- box -->
+          <rect x="40" y="68" width="140" height="98" rx="10" fill="var(--coral)"/>
+          <rect x="40" y="68" width="140" height="30" fill="var(--coral-dark)"/>
+          <path d="M40 68 L110 100 L180 68" fill="none" stroke="var(--forest-dark)" stroke-width="3" stroke-linejoin="round"/>
+          <!-- eyes -->
+          <g class="lost-box-eyes">
+            <circle cx="88" cy="120" r="13" fill="#fff"/>
+            <circle cx="132" cy="120" r="13" fill="#fff"/>
+            <circle class="lost-box-pupil" cx="88" cy="122" r="6" fill="var(--forest-dark)"/>
+            <circle class="lost-box-pupil" cx="132" cy="122" r="6" fill="var(--forest-dark)"/>
+          </g>
+          <!-- worried mouth -->
+          <path d="M92 148 Q110 138 128 148" fill="none" stroke="var(--forest-dark)" stroke-width="4" stroke-linecap="round"/>
+          <!-- arms -->
+          <path class="lost-box-arm-l" d="M42 108 Q14 118 18 148" fill="none" stroke="var(--coral)" stroke-width="10" stroke-linecap="round"/>
+          <path class="lost-box-arm-r" d="M178 108 Q206 100 202 76" fill="none" stroke="var(--coral)" stroke-width="10" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
     <div class="error-code">404</div>
     <h1>This box got lost in transit</h1>
     <p class="text-muted">The page you're looking for doesn't exist or has moved.</p>

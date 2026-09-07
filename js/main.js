@@ -457,6 +457,9 @@
     new Swiper(testiWrap, {
       loop: true,
       speed: 500,
+      effect: "fade",
+      fadeEffect: { crossFade: true },
+      autoHeight: true,
       autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
       pagination: { el: ".swiper-pagination", clickable: true },
       navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
