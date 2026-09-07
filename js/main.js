@@ -103,6 +103,30 @@
     );
   }
 
+  /* ---------------- nd-nav hamburger (mobile) ---------------- */
+  const ndNav = $(".nd-nav");
+  const ndHamburger = $(".nd-hamburger");
+  if (ndNav && ndHamburger) {
+    const closeNdNav = () => {
+      ndNav.classList.remove("nd-nav-open");
+      ndHamburger.classList.remove("active");
+      ndHamburger.setAttribute("aria-expanded", "false");
+    };
+    ndHamburger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = ndNav.classList.toggle("nd-nav-open");
+      ndHamburger.classList.toggle("active", open);
+      ndHamburger.setAttribute("aria-expanded", String(open));
+    });
+    $$(".nd-nav-links a", ndNav).forEach((a) => a.addEventListener("click", closeNdNav));
+    document.addEventListener("click", (e) => {
+      if (ndNav.classList.contains("nd-nav-open") && !ndNav.contains(e.target)) closeNdNav();
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 780) closeNdNav();
+    });
+  }
+
   const backToTop = $(".back-to-top");
   if (backToTop) backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
